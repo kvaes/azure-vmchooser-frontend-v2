@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script> var __basePath = ''; </script>
+<style> html, body { margin: 0; padding: 0; height: 100%; } </style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/17.0.0/ag-grid.js"></script>    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<style>
+    button:disabled { color: #a0a0a0; }
+</style>
+
+<div style="width: 100%; height: 100%; overflow: hidden;">
+    <div style="padding: 4px">
+        <div style="float: right;">
+            <input type="text" id="quickFilterInput" placeholder="Type text to filter..."/>
+            <button id="btDestroyGrid">Destroy Grid</button>
+            <button id="btBringGridBack">Create Grid</button>
+            <button id="btExport">Export to CSV</button>
+        </div>
+        <div style="padding: 4px;">
+            <b>VMchooser - Azure Virtual Machine T-Shirt Sizes</b> (VM Sizes : <span id="rowCount"></span>)
+        </div>
+        <div>
+            
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div style="width: 100%; height: 95%; overflow: hidden;"
+        id="vmchoosergrid"
+        class="ag-theme-balham ag-basic">
+    </div>
+</div>
+
+    <script src="https://vmchooserdev.blob.core.windows.net/database/data.js"></script>
+    <script src="vmchoosergrid.js"></script>
+</body>
+</html>
